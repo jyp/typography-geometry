@@ -5,7 +5,7 @@ Description: 	Drawings for printed text documents
 Category:	Typography
 Author:         Pierre-Etienne Meunier <pierreetienne.meunier@gmail.com>
 Maintainer:	Jean-Philippe Bernardy <jeanphilippe.bernardy@gmail.com>
-License:	GPL
+License:	GPL-2
 License-file:	LICENSE
 Build-Type:	Simple
 Cabal-Version:	>=1.6
