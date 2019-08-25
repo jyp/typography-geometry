@@ -16,7 +16,7 @@ import Algebra.Polynomials.Numerical
 import Graphics.Typography.Geometry.Bezier
 import Graphics.Typography.Geometry
 import Data.List (sort)
-import qualified Data.Map as M
+import qualified Data.Map.Strict as M
 import qualified Data.Vector as V
 
 import Control.Parallel
@@ -110,7 +110,7 @@ cutAll l=V.fromList $ map (\c->V.fromList $ concatMap cutNoSelf c) l
 data Topology=Dedans | SurLaLigne | Dehors deriving (Eq, Ord, Show)
 
 minsert::Ord a=>a->b->M.Map a [b]->M.Map a [b]
-minsert x y m=M.insertWith' (++) x [y] m
+minsert x y m=M.insertWith (++) x [y] m
 
 munion::Ord a=>M.Map a [b]->M.Map a [b]->M.Map a [b]
 munion=M.unionWith (++)
